@@ -1,0 +1,83 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: abea8342ced27854ffef05863bb7262d3b6d3da8a8936f485338dbea1f5e0a68
+
+name:           concur-replica-template
+version:        0.0.0
+license:        BSD3
+build-type:     Simple
+
+library
+  exposed-modules:
+      Main
+  other-modules:
+      Paths_concur_replica_template
+  hs-source-dirs:
+      src
+  default-extensions: StrictData DataKinds DeriveAnyClass DeriveFunctor DeriveGeneric DerivingStrategies ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs LambdaCase MultiParamTypeClasses NamedFieldPuns NoImplicitPrelude OverloadedStrings RankNTypes ScopedTypeVariables TupleSections TypeFamilies TypeOperators
+  ghc-options: -Wall
+  build-depends:
+      async
+    , base
+    , bytestring
+    , concur-core
+    , concur-replica
+    , containers
+    , directory
+    , filepath
+    , gitrev
+    , hashable
+    , lens
+    , mtl
+    , random
+    , replica
+    , safe-exceptions
+    , servant-server
+    , stm
+    , text
+    , time
+    , transformers
+    , unordered-containers
+    , wai
+    , wai-middleware-static
+    , websockets
+  default-language: Haskell2010
+
+executable concur-replica-test
+  main-is: Main.hs
+  other-modules:
+      Paths_concur_replica_template
+  hs-source-dirs:
+      src
+  default-extensions: StrictData DataKinds DeriveAnyClass DeriveFunctor DeriveGeneric DerivingStrategies ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs LambdaCase MultiParamTypeClasses NamedFieldPuns NoImplicitPrelude OverloadedStrings RankNTypes ScopedTypeVariables TupleSections TypeFamilies TypeOperators
+  ghc-options: -Wall -threaded -rtsopts
+  build-depends:
+      async
+    , base
+    , bytestring
+    , concur-core
+    , concur-replica
+    , containers
+    , directory
+    , filepath
+    , gitrev
+    , hashable
+    , lens
+    , mtl
+    , random
+    , replica
+    , safe-exceptions
+    , servant-server
+    , stm
+    , text
+    , time
+    , transformers
+    , unordered-containers
+    , wai
+    , wai-middleware-static
+    , websockets
+  default-language: Haskell2010

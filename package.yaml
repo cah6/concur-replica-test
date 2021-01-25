@@ -1,0 +1,63 @@
+name: concur-replica-template
+license: BSD3
+default-extensions:
+  - StrictData
+
+  - DataKinds
+  - DeriveAnyClass
+  - DeriveFunctor
+  - DeriveGeneric
+  - DerivingStrategies
+  - ExistentialQuantification
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - InstanceSigs
+  - LambdaCase
+  - MultiParamTypeClasses
+  - NamedFieldPuns
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - RankNTypes
+  - ScopedTypeVariables
+  - TupleSections
+  - TypeFamilies
+  - TypeOperators
+
+ghc-options: -Wall
+dependencies:
+  - concur-core
+  - concur-replica
+  - replica
+  - gitrev
+  - servant-server
+  - wai
+  - wai-middleware-static
+  - websockets
+
+  - async
+  - base
+  - bytestring
+  - containers
+  - directory
+  - filepath
+  - hashable
+  - lens
+  - mtl
+  - random
+  - safe-exceptions
+  - stm
+  - text
+  - time
+  - transformers
+  - unordered-containers
+
+library:
+  source-dirs: src
+executables:
+  concur-replica-test:
+    source-dirs: src
+    main: Main.hs
+    ghc-options: -threaded -rtsopts
